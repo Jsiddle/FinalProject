@@ -1,0 +1,27 @@
+﻿@model IEnumerable<Sales>
+
+<h2>Sales</h2>
+<table class="table">
+    <tr>
+        <th>SalesID</th>
+        <th>ProductID</th>
+        <th>Quantity</th>
+        <th>PricePerUnit</th>
+        <th>Date</th>
+        <th>EmployeeID</th>
+    </tr>
+
+    @foreach (var sales in Model)
+    {
+        <tr>
+            <td><a href=/Sales/ViewSales/@sales.SalesID>@sales.SalesID</a></td>
+            <td>@sales.ProductID</td>
+            <td>@sales.Quantity</td>
+            <td>@sales.PricePerUnit</td>
+            <td>@sales.Date</td>
+            <td>@sales.EmployeeID</td>
+        </tr>
+
+    }
+</table>
+
